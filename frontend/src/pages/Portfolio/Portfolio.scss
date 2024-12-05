@@ -1,0 +1,11 @@
+.Portfolio {
+
+
+
+  .main-wrapper {
+    display: flex; // Ensure proper flex layout for Sidebar + ScreenMain
+    flex: 1; // Fill the vertical space
+    overflow: hidden; // Prevent overflow
+  }
+
+}
