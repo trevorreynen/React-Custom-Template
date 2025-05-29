@@ -101,7 +101,6 @@ This design was chosen deliberately for developer ergonomics, readability, and c
 |--------|---------|
 | [`react`](https://www.npmjs.com/package/react), [`react-dom`](https://www.npmjs.com/package/react-dom) | React core libraries |
 | [`react-router-dom`](https://www.npmjs.com/package/react-router-dom) | Client-side routing |
-| [`@mui/material`](https://www.npmjs.com/package/@mui/material), [`@emotion/react`](https://www.npmjs.com/package/@emotion/react) | UI components and styling |
 | [`dotenv`](https://www.npmjs.com/package/dotenv) | Local `.env` file parsing |
 | [`stylelint`](https://www.npmjs.com/package/stylelint`) + SCSS rules | CSS linter scoped to frontend folder |
 
@@ -126,11 +125,11 @@ This design was chosen deliberately for developer ergonomics, readability, and c
 | Library | Included | Notes |
 |--------|------|-------|
 | [`@mui/material`](https://www.npmjs.com/package/@mui/material) | ✅ | Theming and accessibility support |
+| [`@emotion/react`](https://www.npmjs.com/package/@emotion/react) | ✅ | CSS-in-JS used by MUI |
 | [`antd`](https://www.npmjs.com/package/antd) | --> | An enterprise-class UI design language and React UI library |
 | [`chakra-ui`](https://www.npmjs.com/package/@chakra-ui/react) | --> | Accessible and theme-friendly |
 | [`tailwindcss`](https://www.npmjs.com/package/tailwindcss) | --> | Utility-first CSS |
 | [`styled-components`](https://www.npmjs.com/package/styled-components) | --> | Scoped CSS-in-JS |
-| [`@emotion/react`](https://www.npmjs.com/package/@emotion/react) | ✅ | CSS-in-JS used by MUI |
 
 ### 🌐 HTTP & Fetching
 
