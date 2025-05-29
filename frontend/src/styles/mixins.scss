@@ -1,0 +1,61 @@
+/* @use '@/styles/mixins'; */
+
+/* @include mixins.Scrollable; */
+@mixin Scrollable($overflowRule: auto) {
+  overflow-x: hidden;
+  overflow-y: $overflowRule;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background: #464749; /* Default color of the scrollbar thumb */
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background: #949596; /* Background color of the scrollbar track */
+    border-radius: 4px; /* Round the scrollbar track edges */
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #545657; /* Darker color when the thumb is hovered */
+    cursor: pointer;
+  }
+}
+
+
+/* @include mixins.FlexSpaceBetween; */
+@mixin FlexSpaceBetween() {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Puts empty space between child divs */
+  align-items: center; /* Vertically centers child divs */
+}
+
+/* @include mixins.FlexCenter; */
+@mixin FlexCenter() {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Horizontally centers child elements */
+  align-items: center; /* Vertically centers child divs */
+}
+
+/* @include mixins.Flex; */
+@mixin Flex() {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Vertically centers child divs */
+}
+
+/* @include mixins.FlexCol; */
+@mixin FlexCol() {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column;
+}
+
