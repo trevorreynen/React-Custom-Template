@@ -1,18 +1,18 @@
-// import Landing from '@/pages/Landing/Landing'
+// import { useTitleManager } from '@/hooks/useTitleManager'
 
 // ====================< IMPORTS: REACT >=================================
-import { Helmet } from 'react-helmet-async'
+import { useContext } from 'react'
 
 // ====================< IMPORTS: LAYOUT >================================
 
 // ====================< IMPORTS: PAGES >=================================
 
 // ====================< IMPORTS: COMPONENTS >============================
-import { Box, Typography } from '@mui/material'
 
 // ====================< IMPORTS: TYPES >=================================
 
 // ====================< IMPORTS: CONTEXTS/HOOKS >========================
+import { TitleContext } from '@/contexts/TitleManager'
 
 // ====================< IMPORTS: UTILS >=================================
 
@@ -21,20 +21,7 @@ import { Box, Typography } from '@mui/material'
 // ====================< IMPORTS: STYLES >================================
 
 
-export default function Landing() {
-  // Render landing page.
-  return (
-    <>
-      <Helmet><title>Landing</title></Helmet>
-
-
-      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2, height: '100%' }}>
-
-
-        <Typography>Landing page</Typography>
-
-
-      </Box>
-    </>
-  )
+// Hook to programmatically set the page title with prefix.
+export const useTitleManager = () => {
+  return useContext(TitleContext)
 }

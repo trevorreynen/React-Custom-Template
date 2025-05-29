@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "CommonJS",
+    "module": "ESNext",
     "lib": ["DOM", "ESNext"],
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -19,5 +19,6 @@
       "@/*": ["./src/*"] // Simplifies imports using aliases
     }
   },
+  "include": ["src"],
   "exclude": ["webpack.config.js", "node_modules"]
 }

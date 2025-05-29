@@ -11,10 +11,6 @@ const dotenv = require('dotenv')
 // Import the global .env for the frontend/backend.
 dotenv.config({path: '../.env'})
 
-
-// The APP_TITLE is imported via env variables.
-const APP_TITLE = process.env.FRONTEND_WEBSITE_TITLE
-
 const isProduction = process.env.MODE === 'production'
 
 // Function to find an available port and return the Webpack configuration
@@ -43,19 +39,14 @@ module.exports = async () => {
           test: /\.(ts|tsx)$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
-          },
-          /*
-          use: {
             loader: 'ts-loader',
-          }
-          */
+          },
         },
         {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: 'ts-loader',
           },
         },
         {
@@ -85,11 +76,11 @@ module.exports = async () => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.API_BASE': JSON.stringify(process.env.API_BASE),
+        FRONTEND_WEBSITE_TITLE: JSON.stringify(process.env.FRONTEND_WEBSITE_TITLE),
+        //'process.env.API_BASE': JSON.stringify(process.env.API_BASE),
       }),
       new HtmlWebpackPlugin({
         template: './public/index.html',
-        title: APP_TITLE,
       }),
       ...(isProduction ? [new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' })] : []),
     ],
