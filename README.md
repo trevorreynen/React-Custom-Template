@@ -102,9 +102,6 @@ This design was chosen deliberately for developer ergonomics, readability, and c
 | [`webpack`](https://www.npmjs.com/package/webpack)                                                                                                 | JavaScript bundler: handles asset compilation and output |
 | [`webpack-cli`](https://www.npmjs.com/package/webpack-cli)                                                                                         | CLI to configure and run Webpack                         |
 | [`webpack-dev-server`](https://www.npmjs.com/package/webpack-dev-server)                                                                           | Dev server with live reloading and HMR                   |
-| [`@babel/core`](https://www.npmjs.com/package/@babel/core)                                                                                         | Babel compiler core                                      |
-| [`babel-loader`](https://www.npmjs.com/package/babel-loader)                                                                                       | Integrates Babel into Webpack                            |
-| [`@babel/preset-env`](https://www.npmjs.com/package/@babel/preset-env), [`@babel/preset-react`](https://www.npmjs.com/package/@babel/preset-react) | Presets to transpile modern JavaScript and JSX           |
 | [`dotenv`](https://www.npmjs.com/package/dotenv)                                                                                                   | Local `.env` file parsing                                |
 | [`stylelint`](https://www.npmjs.com/package/stylelint`)                                                                                            | CSS linter scoped to frontend folder                     |
 
